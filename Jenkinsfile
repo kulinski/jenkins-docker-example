@@ -1,3 +1,4 @@
+// Very simple version of Jenkinsfile pipeline with docker-workflow plugin and remote git source integration 
 node {
    stage 'Stage 1'
    echo 'Hello World 1'
