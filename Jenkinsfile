@@ -7,7 +7,8 @@ node {
    stage 'Checkout'
    git 'https://github.com/kulinski/jenkins-docker-example.git'
    stage 'Build'
-   docker.image('maven:3.3.9-jdk-8').inside {
+   // Pick a container that has maven, but based on Alpine, so that its small
+   docker.image('jimschubert/8-jdk-alpine-mvn').inside {
     sh 'mvn --version'
  }
 }
